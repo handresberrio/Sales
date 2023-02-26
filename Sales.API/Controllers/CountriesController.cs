@@ -21,8 +21,20 @@ namespace Sales.API.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAsync()
         {
-            return Ok(await _context.Countries.ToListAsync());
+            return Ok(await _context.Countries.
+                Include(x => x.States). // es el inner join de entitie framework
+                ToListAsync());
         }
+
+        [HttpGet("full")]
+        public async Task<ActionResult> GetFull()
+        {
+            return Ok(await _context.Countries
+                .Include(x => x.States!)
+                .ThenInclude(x => x.Cities)
+                .ToListAsync());
+        }
+
 
         [HttpGet("{id:int}")] // el int no es necesario pero queda mejor y mas reforzado
         public async Task<ActionResult> GetAsync(int id)
