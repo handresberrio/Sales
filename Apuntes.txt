@@ -1,0 +1,16 @@
+Api
+appsettings -----> es donde se encuentra el string de conexion a la bd
+Data.DataContext -----> donde se configura el contexto a la bd y el indice
+Programs -----> es donde se especifica el contexto de la bd, se le indica el nombre del string de conexion y los permisos de consumo a la Api
+Controller.CountriesController -----> donde van los endpoints (entrypoint)
+
+Web
+Repositories.IRepository -----> es la interfas donde se encuentran definidos los metodos de consumo a implementar
+Repositories.Repository -----> aca es donde implemento los metodos de su interfaz
+Repositories.HttpResponseWrapper -----> es una clase generica que ayuda con la validacion de las respuestas basicas del consumo del api
+Programs -----> donde se especifica la url de consumo de la Api, la libreria de los alert y el Repository
+www.root.index -----> se agrega una libreria de Java para los alerts
+_imports.razor -----> donde van todas las importaciones de razor
+Pages.Countries.CountryIndex-----> pagina principal de paises
+Pages.Countries.Countryform -----> generico que pinta el formulario de creacion
+Pages.Countries.CountryCreate -----> tiene las acciones de crear y regregar
