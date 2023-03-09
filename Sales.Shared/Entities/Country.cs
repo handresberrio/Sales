@@ -14,6 +14,7 @@ namespace Sales.Shared.Entities
 
         public ICollection<State>?  States { get; set; } // relacion muchos a uno
 
+        [Display(Name = "Estados/Departamentos")]
         public int StatesNumber => States == null ? 0 : States.Count; // propiedad de lectura me dice cuantos estados tiene un pais
     }
 }

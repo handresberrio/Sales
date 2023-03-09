@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Sales.Shared.Entities
 {
@@ -12,7 +6,7 @@ namespace Sales.Shared.Entities
     {
         public int Id { get; set; }
 
-        public int StateyId { get; set; }
+        public int StateId { get; set; }
 
         [Display(Name = "Ciudad")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
