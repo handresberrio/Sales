@@ -14,5 +14,8 @@ namespace Sales.Shared.Entities
         public string Name { get; set; } = null!;
 
         public State? State { get; set; } // relacion de uno a muchos
+
+        public ICollection<User>? Users { get; set; }
+
     }
 }
