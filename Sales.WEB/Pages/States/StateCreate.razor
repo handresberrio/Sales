@@ -1,7 +1,10 @@
 ﻿@page "/states/create/{CountryId:int}"
+
 @inject IRepository repository
 @inject NavigationManager navigationManager
 @inject SweetAlertService sweetAlertService
+
+@attribute [Authorize(Roles = "Admin")]
 
 <h3>Crear Estado/Departamento</h3>
 

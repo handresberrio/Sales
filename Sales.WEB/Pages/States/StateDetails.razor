@@ -1,7 +1,10 @@
 ﻿@page "/states/details/{StateId:int}"
+
 @inject IRepository repository
 @inject NavigationManager navigationManager
 @inject SweetAlertService sweetAlertService
+
+@attribute [Authorize(Roles = "Admin")]
 
 @if (state is null)
 {

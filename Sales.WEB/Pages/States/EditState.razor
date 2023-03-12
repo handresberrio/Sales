@@ -1,8 +1,11 @@
 ﻿@page "/states/edit/{StateId:int}"
+
 @inject IRepository repository
 @inject NavigationManager navigationManager
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
+
+@attribute [Authorize(Roles = "Admin")]
 
 <h3>Editar Estado/Departamento</h3>
 
